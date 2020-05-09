@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>ALIFKHI-POSTCRUD-Arkademy</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Logo Arkademy -->
+        <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="https://www.arkademy.com/img/logo%20arkademy.1c82cf5c.svg" width="70" height="70">
+        </a>
+        <input class="search form-control" type="text" placeholder="Search">
+        <form class="form-inline">
+            <!-- Triggred Modal -->
+          <a href="#" class="btn btn-warning mb-2 auto" id="new-product" data-toggle="modal" data-target="#add-modal">ADD</a>
+        </form>
+        </nav>
+
+        <div class="container">
+            <table class="table">
+                <thead class="thead primary">
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Cashier</th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Pevita Pearce</td>
+                    <td>Latte</td>
+                    <td>Drink</td>
+                    <td>Rp.200000</td>
+                    <td>
+                        <form action="" method="post">
+                            <a href="#" class="btn btn-success" id="edit-product" data-toggle="modal">Edit </a>
+                            <meta name="csrf-token" content="{{ csrf_token() }}">
+                            <a id="delete-product" data-id="" class="btn btn-danger delete-user" style="color: white">Delete</a>
+                        </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Pevita Pearce</td>
+                    <td>Cake</td>
+                    <td>Food</td>
+                    <td>Rp.20000</td>
+                    <td>
+                        <form action="" method="post">
+                            <a href="javascript:void(0)" class="btn btn-success" id="edit-product" data-toggle="modal">Edit </a>
+                            <meta name="csrf-token" content="{{ csrf_token() }}">
+                            <a id="delete-product" data-id="{{ $product->id }}" class="btn btn-danger delete-user" style="color: white">Delete</a>
+                        </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Alifki</td>
+                    <td>Nasi Goreng</td>
+                    <td>Food</td>
+                    <td>Rp.45000</td>
+                    <td>
+                        <form action="" method="post">
+                            <a href="javascript:void(0)" class="btn btn-success" id="edit-product" data-toggle="modal">Edit </a>
+                            <meta name="csrf-token" content="{{ csrf_token() }}">
+                            <a id="delete-product" data-id="{{ $product->id }}" class="btn btn-danger delete-user" style="color: white">Delete</a>
+                        </form>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+                    <!-- Modal add and edit -->
+                    <div class="modal fade" id="add-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">ADD</h5>
+                            <button type="button" class="close" style="color: red;" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body">
+                                <form name="custForm" action="" method="POST">
+                                    <input type="hidden" name="cust_id" id="cust_id" >
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                                <div class="form-group">
+                                                <select  type="text" name="cashier" id="cashier" class="form-control">
+                                                    <option selected>Cashier</option>
+                                                    <option value="Raisa Andriana">Raisa Andriana</option>
+                                                    <option value="Pevita Pearce">Pevita Pearce</option>
+                                                    <option value="Alifkhi Miftahul Janah">Alifkhi Miftahul Janah</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xs-14 col-sm-14 col-md-14">
+                                                <div class="form-group">
+                                                    <input type="text" name="name" id="name" class="form-control" placeholder="Product" >
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-14 col-sm-14 col-md-14">
+                                                <div class="form-group">
+                                                <select  type="text" name="category" id="category" class="form-control">
+                                                    <option selected>Category</option>
+                                                    <option value="Food">Food</option>
+                                                    <option value="Drink">Drink</option>
+                                                </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-14 col-sm-14 col-md-14">
+                                                <div class="form-group">
+                                                    <input type="text" name="price" id="price" class="form-control" placeholder="Price">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="submit" name="btnsave" class="btn btn-warning mb-2">add</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+        </div>
+    </body>
+</html>

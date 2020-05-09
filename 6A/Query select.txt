@@ -1,0 +1,1 @@
+SELECT * FROM `products` AS pd INNER JOIN cashiers as cs ON pd.id_cashier = cs.id INNER JOIN categories AS ct ON pd.id_category = ct.id

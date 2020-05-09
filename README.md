@@ -1,5 +1,5 @@
-# Arkademy-B16-3
-<h2><b>Seleksi Bootcamp Arkademy Batch 16-4</b></h2>
+# Arkademy-B16-4
+<h2><b>Bootcamp Arkademy Batch 16-4</b></h2>
 
 <h4><b>Kegunaan JSON Pada Rest API</b></h4>
 Pada REST API, JSON  adalah sebuah format data yang digunakan untuk pertukaran dan penyimpanan data antar aplikasi. 

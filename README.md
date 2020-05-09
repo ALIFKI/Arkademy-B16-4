@@ -26,5 +26,8 @@ Query<br>
 [![Query.png](https://i.postimg.cc/sxDyyzQV/Query.png)](https://postimg.cc/7GcjMpnc)
 
 MOCKUP<br>
+[![Mockup-1.png](https://i.postimg.cc/TwqGZ90v/Mockup-1.png)](https://postimg.cc/PpxBD10S)
 
+[![Mockup-2.png](https://i.postimg.cc/D0xhzwRC/Mockup-2.png)](https://postimg.cc/H88RZdY5)
 
+[![Mockup-3.png](https://i.postimg.cc/yx1BBZpg/Mockup-3.png)](https://postimg.cc/hz5N1fBc)

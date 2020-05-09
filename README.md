@@ -4,9 +4,10 @@
 <h4><b>Kegunaan JSON Pada Rest API</b></h4>
 Pada REST API, JSON  adalah sebuah format data yang digunakan untuk pertukaran dan penyimpanan data antar aplikasi. 
 
-<h4><b>Jawaban Soal Nomor 1-5 menggunakan JavaScript, bisa dijalankan melalui https://es6console.com/</b></h4>
+<h4><b>Jawaban Soal Nomor 1-5 menggunakan JavaScript</b></h4>
 
-<h4><b>Jawaban Soal Nomor 6B dan 6C Membutuhkan Koneksi Internet Untuk Bootstrap karena menggunakan cdn. Jawaban Soal 6C Menggunakan Framework Laravel</b></h4>
+<h4><b>Jawaban Soal Nomor 6B Membutuhkan Koneksi Internet Untuk Bootstrap karena menggunakan cdn.</b></h4>
+<h4><b> Jawaban Soal 6C Menggunakan Framework Laravel dan membutuhkan koneksi internet</b></h4>
 1. Install XAMPP http://www.apachefriends.org/index.html<br>
 2. Install Composer dan Laravel https://laravel.com/docs/7.x/installation <br>
 3. Buat database dengan nama "bootcamp", lalu import file bootcamp.sql yang ada di poin 6A<br>
